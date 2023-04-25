@@ -14,3 +14,6 @@ Minimum Viable Product (MVP) definition:
 The MVP for TravelExplore will include a homepage where users can enter their destination.
 What is the minimum required for you to present on your demo day?
 To present on the demo day, we need to have a functional homepage that accepts user inputs and displays recommendations based on their preferences. We also need to have a basic database of destinations.
+
+![Domain Model](img/domainModel.png)
+![Lazy Logo](img/LazyLogo.png)
