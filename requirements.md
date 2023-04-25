@@ -44,5 +44,5 @@
 
 ## Data Flow
 
-   * Refer to the Lazy Traveller Domain Model in the Repo ![Read Me](readme.md)
+   * Refer to the Lazy Traveller Domain Model in the Repo ![Read Me](lazy-travelers/readme.md)
 
