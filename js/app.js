@@ -1,30 +1,24 @@
-<<<<<<< HEAD
 'Use Strict'
-
-=======
-// 'use strict';
 
 let imgArray = [];
 
 let getimgArray = localStorage.getItem('imgArray');
 
+const travelNames = []
+
 if (getimgArray) {
   imgArray = JSON.parse(getimgArray);
 } else {
-  let babyMob = new Duck('sweep', 'png');
+  let ???? = new ???? ('');
   
-  imgArray.push(babyMob, ..., ...);
+  imgArray.push(image1, image2, image3);
 }
 
 let indexArray = [];
 
 let myContainer = document.querySelector('section');
 
-let image1 = document.querySelector('section img:first-child');
-
-let image2 = document.querySelector('section img:nth-child(2)');
-
-let image3 = document.querySelector('section img:nth-child(3)');
+let imgElements = document.querySelectorAll('img');
 
 let viewResultsBtn = document.querySelector('section ~ div');
 
@@ -37,6 +31,16 @@ function ImgName(name, fileExtention = 'jpg') {
   this.views = 0;
   this.votes = 0;
 }
+
+for (let i = 0; i < imgElements.length; i++) {
+  let randomIndex = productIndexArray.shift()
+
+  imgElements[i].src = state.allProducts[randomIndex].source
+  imgElements[i].title = state.allProducts[randomIndex].name
+  imgElements[i].alt = state.allProducts[randomIndex].name
+  state.allProducts[randomIndex].timesShown++;
+}
+
 
 function selectRandomImgNumber() {
   return Math.floor(Math.random() * imgArray.length);
@@ -87,7 +91,6 @@ function handleImgClick(event) {
 }
 
 function viewResults() {
-  renderChart();
   viewResultsBtn.removeEventListener('click', viewResults);
 }
 
@@ -101,4 +104,3 @@ viewResultsBtn.addEventListener('click', viewResults);
 myContainer.addEventListener('click', handleOddClick);
 
 // console.log(imgArray.votes);
->>>>>>> refs/remotes/origin/main
