@@ -1,106 +1,53 @@
-'Use Strict'
+'use strict';
 
-let imgArray = [];
-
-let getimgArray = localStorage.getItem('imgArray');
-
-const travelNames = []
-
-if (getimgArray) {
-  imgArray = JSON.parse(getimgArray);
-} else {
-  let ???? = new ???? ('');
-  
-  imgArray.push(image1, image2, image3);
-}
-
-let indexArray = [];
-
-let myContainer = document.querySelector('section');
-
-let imgElements = document.querySelectorAll('img');
-
-let viewResultsBtn = document.querySelector('section ~ div');
+let travelArray = [];
+let randomArray = [];
 
 let counter = 0;
-let maxCounter = 7;
 
-function ImgName(name, fileExtention = 'jpg') {
-  this.name = name;
-  this.src = `img/${name}.${fileExtention}`;
-  this.views = 0;
-  this.votes = 0;
+// Object Constructor
+function Vacation(name, fileName, fileExtension = 'jpg') {
+    this.name = name;
+    this.fileName = fileName;
+    this.src = `./img/${this.fileName}.${fileExtension}`;
+    this.votes = 0;
 }
 
-for (let i = 0; i < imgElements.length; i++) {
-  let randomIndex = productIndexArray.shift()
+function makeTravelArray() {
+    let Travel1 = new Vacation('ireland', 'Travel1');
+    let Travel2 = new Vacation('switzerland', 'Travel2');
+    let Travel3 = new Vacation('mexico', 'Travel3');
+    let Travel4 = new Vacation('zimbabwa', 'Travel4');
+    let Travel5 = new Vacation('cockney', 'Travel5');
 
-  imgElements[i].src = state.allProducts[randomIndex].source
-  imgElements[i].title = state.allProducts[randomIndex].name
-  imgElements[i].alt = state.allProducts[randomIndex].name
-  state.allProducts[randomIndex].timesShown++;
+    travelArray.push(Travel1, Travel2, Travel3, Travel4, Travel5);
 }
 
 
-function selectRandomImgNumber() {
-  return Math.floor(Math.random() * imgArray.length);
-}
 
-function renderImg() {
-  while (indexArray.length < 6) {
-    let randomIndex = selectRandomImgNumber();
-    console.log(randomIndex);
-    if (!indexArray.includes(randomIndex)) {
-      indexArray.push(randomIndex);
+let myContainer = document.querySelector('#imgContainer');
+let Travel1 = document.querySelector('#imgContainer img:first-child');
+let Travel2 = document.querySelector('#imgContainer img:nth-child(2)');
+let Travel3 = document.querySelector('#imgContainer img:nth-child(3)');
+
+function selectRandomTravelNumber() {
+    return Math.floor(Math.random() * travelArray.length);
+}
+// When the very first time the code loads what is the value of the array? Empty array, not Nothing.
+function renderTravel() {
+    while (randomArray.length < 3) {
+        // How do we get the randomArray to become false? Length must be higher number than 6. How do we change the length of the array? 
+
+        let random = selectRandomTravelNumber(); // 5
+        while (!randomArray.includes(random)) {
+            randomArray.push(random)
+        }
+        console.log(randomArray.length)
     }
-  }
-  let imageOneIndex = indexArray.shift();
-  let imageTwoIndex = indexArray.shift();
-  let imageThreeIndex = indexArray.shift();
-
-  image1.src = imgArray[imageOneIndex].src;
-  image1.alt = imgArray[imageOneIndex].name;
-  imgArray[imageOneIndex].views++;
-  image2.src = imgArray[imageTwoIndex].src;
-  image2.alt = imgArray[imageTwoIndex].name;
-  imgArray[imageTwoIndex].views++;
-  image3.src = imgArray[imageThreeIndex].src;
-  image3.alt = imgArray[imageThreeIndex].name;
-  imgArray[imageThreeIndex].views++;
 }
+console.log(travelArray)
 
-function handleImgClick(event) {
-  counter++;
-  console.log(event.target.alt);
-  let clickedImg = event.target.alt;
-  for (let i = 0; i < imgArray.length; i++) {
-    if (clickedImg === imgArray[i].name) {
-      imgArray[i].votes++;
-      console.log(imgArray);
-    }
-  }
-  if (counter < maxCounter) {
-    renderImg();
-  } else {
-    // remove event listeners
-    myContainer.removeEventListener('click', handleImgClick);
-    viewResultsBtn.addEventListener('click', viewResults);
-  }
-  let stringifyimgArray = JSON.stringify(imgArray);
-  localStorage.setItem('imgArray', stringifyimgArray);
-}
 
-function viewResults() {
-  viewResultsBtn.removeEventListener('click', viewResults);
-}
+makeTravelArray();
 
-renderImg();
-
-myContainer.addEventListener('click', handleImgClick);
-
-resetBtn.addEventListener('click', reset);
-
-viewResultsBtn.addEventListener('click', viewResults);
-myContainer.addEventListener('click', handleOddClick);
-
-// console.log(imgArray.votes);
+renderTravel();
