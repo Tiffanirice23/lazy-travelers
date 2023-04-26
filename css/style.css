@@ -1,8 +1,10 @@
 
 
 body {
-  background-color: antiquewhite;
+  background-color: rgb(68, 194, 235);
   max-width: 960;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 #img {
@@ -16,4 +18,41 @@ body {
 footer {
   text-align: center;
   padding-top: 100px;
+}
+
+
+#topAboutUs {
+background-color: rgb(107, 111, 107);
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin: 30px;
+}
+
+div >img {
+  margin: 45px;
+  border-radius: 50%;
+}
+
+#bottomAboutUs {
+  background-color: rgb(107, 111, 107);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 30px;
+}
+
+.navintroduction{
+  margin-left: 50px;
+  width: 100px;
+  overflow-y: auto;
+  width: 220px;
+  max-height: 200px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  text-align: center;
+  font-size: larger;
+  margin-top: 30px;
 }
