@@ -47,10 +47,10 @@ function createContinent() {
       travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpg'))
     } else {
       travelArray.push(new Vacation
-        (continentArray[i], continentArray[i]))
+      (continentArray[i], continentArray[i]))
     }
   }
-  console.log(travelArray)
+  console.log(travelArray);
 }
 createContinent();
 
@@ -91,7 +91,7 @@ function renderVacation() {
 
 // create event.handler
 function handleTravelClick(event) {
-  console.log(travelArray)
+  console.log(travelArray);
   counter++;
   console.log(event.target.alt);
   let clickedTravel = event.target.alt;
@@ -99,7 +99,7 @@ function handleTravelClick(event) {
   for (let i = 0; i < travelArray.length; i++) {
     if (clickedTravel === travelArray[i].name) {
       travelArray[i].votes++;
-      console.log(travelArray)
+      console.log(travelArray);
     }
   }
 
@@ -113,7 +113,10 @@ function handleTravelClick(event) {
     // make the button clickable
     viewResultsBtn.addEventListener('click', viewResults);
     // stop the game and render the results
+    
   }
+  let stringifyTravelArray = JSON.stringify(travelArray);
+  localStorage.setItem('travelArray', stringifyTravelArray);
 }
 
 // function selectRandomTravelNumber() {
