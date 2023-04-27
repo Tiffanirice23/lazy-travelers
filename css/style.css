@@ -68,7 +68,33 @@ h3 {
 
 section>img {
   width: 30%;
-  height: 200px;
+  height: 400px;
+  margin: 10px;
 }
 
-timmy
+section>img:hover{
+  border: 5px solid black;
+}
+#userName {
+  margin-left: 130px;
+}
+
+#indexHeader {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+
+#h1Index {
+  font-weight: bolder;
+  font-size: larger;
+  font-size: 30px;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-left: 450px;
+}
+
+#btnContainer {
+  background-color: black;
+  margin-top: 150px;
+}

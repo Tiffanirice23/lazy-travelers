@@ -43,12 +43,14 @@ function createContinent() {
     for (let i = 0; i < continentArray.length; i++) {
         if (['aztec', 'thailand', 'viet'].includes(continentArray[i])) {
             travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpeg'))
-    } else if (['candyland', 'Travel1', 'Travel2', 'Travel3', 'Travel4', 'Travel5'].includes(continentArray[i])) {
+        } else if (['candyland', 'Travel1', 'Travel2', 'Travel3', 'Travel4', 'Travel5'].includes(continentArray[i])) {
             travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpg'))
-        } else { travelArray.push(new Vacation
-            (continentArray[i], continentArray[i]))}
+        } else {
+            travelArray.push(new Vacation
+                (continentArray[i], continentArray[i]))
+        }
     }
-    console.log(travelArray)
+    console.log(travelArray);
 }
 createContinent();
 
@@ -115,17 +117,17 @@ function handleTravelClick(event) {
 }
 
 // function selectRandomTravelNumber() {
-    //   let randomNum;
-    //   do {
-        //     randomNum = Math.floor(Math.random() * travelArray.length);
-        //   } while (travelArray.includes(randomNum));
-        //   return randomNum;
-        // }
-        // function selectRandomTravelNumber() {
-            //     return Math.floor(Math.random() * travelArray.length);
-            // }
-            // When the very first time the code loads what is the value of the array? Empty array, not Nothing.
-            
-            
-            renderVacation();
-            myContainer.addEventListener('click', handleTravelClick);
+//   let randomNum;
+//   do {
+//     randomNum = Math.floor(Math.random() * travelArray.length);
+//   } while (travelArray.includes(randomNum));
+//   return randomNum;
+// }
+// function selectRandomTravelNumber() {
+//     return Math.floor(Math.random() * travelArray.length);
+// }
+// When the very first time the code loads what is the value of the array? Empty array, not Nothing.
+
+
+renderVacation();
+myContainer.addEventListener('click', handleTravelClick);
