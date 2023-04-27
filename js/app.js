@@ -5,10 +5,10 @@ let travelArray = [];
 // While the randomArray sets the random image in the index to be selected.
 let randomArray = [];
 
-let travelArrayFromStorage = localstorage.getItem('travelArray')
-if (travelArrayFromStorage){
-    travelArray = JSON.parse(travelArrayFromStorage);
-} else {}
+// let travelArrayFromStorage = localstorage.getItem('travelArray')
+// if (travelArrayFromStorage){
+//     travelArray = JSON.parse(travelArrayFromStorage);
+// } else 
 
 let counter = 0;
 let maxCounter = 30;
@@ -20,6 +20,7 @@ let myContainer = document.getElementById('imgContainer');
 let vacationPicOne = document.getElementById('vacationPicOne');
 let vacationPicTwo = document.getElementById('vacationPicTwo');
 let vacationPicThree = document.getElementById('vacationPicThree');
+
 
 // slashes break deploument on github pages
 function Vacation(name, fileName, fileExtension = 'png') {

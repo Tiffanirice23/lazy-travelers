@@ -82,5 +82,7 @@ Overall, Lazy Traveler provides an engaging and interactive way for users to exp
 
 * By providing personalized information about each destination, such as its history, culture, and attractions, Lazy Traveler encourages users to plan their own itinerary and make the most of their trip. The application takes the hassle out of travel planning and helps users discover new and exciting destinations, selling them on the dream of a once-in-a-lifetime trip. Overall, Lazy Traveler aims to make travel accessible and enjoyable for everyone, inspiring users to explore new destinations and create unforgettable memories.
 
-![Domain Model](img/domainModel.png)
-![Lazy Logo](img/LazyLogo.png)
+
+![Screenshot 2023-04-25 122320](https://user-images.githubusercontent.com/126429063/234956378-5da3b543-9847-4083-a546-613b2f808f3f.png)
+
+![LazyTravelers Logo](https://user-images.githubusercontent.com/126429063/234958670-f6f8b127-98c9-47ad-91e8-38d85a94561e.png)
