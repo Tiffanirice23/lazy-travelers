@@ -5,25 +5,32 @@ let travelArray = [];
 // While the randomArray sets the random image in the index to be selected.
 let randomArray = [];
 
-let counter = 0;
+let travelArrayFromStorage = localstorage.getItem('travelArray')
+if (travelArrayFromStorage){
+    travelArray = JSON.parse(travelArrayFromStorage);
+} else {}
 
-let myContainer = document.getElementById('#imgContainer');
+let counter = 0;
+let maxCounter = 30;
+
+// quereyselector would need a # or CSS selector.
+// getelementByID just needs the ID of the element.
+let myContainer = document.getElementById('imgContainer');
 
 let vacationPicOne = document.getElementById('vacationPicOne');
 let vacationPicTwo = document.getElementById('vacationPicTwo');
 let vacationPicThree = document.getElementById('vacationPicThree');
 
-
-
+// slashes break deploument on github pages
 function Vacation(name, fileName, fileExtension = 'png') {
     this.name = name;
     this.fileName = fileName;
-    this.src = `/img/${fileName}.${fileExtension}`;
+    this.src = `img/${fileName}.${fileExtension}`;
     this.votes = 0;
 }
 
 function createContinent() {
-
+    // 24 instances
     const continentArray = ['aztec', 'california', 'candyland', 'ecuador', 'everest', 'france', 'germany', 'harbor', 'italy', 'lithuania', 'mayan', 'mexico', 'norway', 'paris', 'rome', 'sicily', 'switzerland', 'thailand', 'Travel1', 'Travel2', 'Travel3', 'Travel4', 'Travel5', 'viet'];
 
     // JPEG: aztec, thailand, viet
@@ -40,6 +47,7 @@ function createContinent() {
         } else { travelArray.push(new Vacation
             (continentArray[i], continentArray[i]))}
     }
+    console.log(travelArray)
 }
 createContinent();
 
@@ -65,7 +73,6 @@ function renderVacation() {
             randomArray.push(randomNum);
         }
     }
-    console.log(travelArray);
 
     let imgOneIndex = randomArray.shift();
     let imgTwoIndex = randomArray.shift();
@@ -73,17 +80,15 @@ function renderVacation() {
 
     vacationPicOne.src = travelArray[imgOneIndex].src;
     vacationPicOne.alt = travelArray[imgOneIndex].name;
-    travelArray[imgOneIndex].votes++;
     vacationPicTwo.src = travelArray[imgTwoIndex].src;
     vacationPicTwo.alt = travelArray[imgTwoIndex].name;
-    travelArray[imgTwoIndex].votes++;
     vacationPicThree.src = travelArray[imgThreeIndex].src;
     vacationPicThree.alt = travelArray[imgThreeIndex].name;
-    travelArray[imgThreeIndex].votes++;
 }
 
 // create event.handler
 function handleTravelClick(event) {
+    console.log(travelArray)
     counter++;
     console.log(event.target.alt);
     let clickedTravel = event.target.alt;
@@ -91,6 +96,7 @@ function handleTravelClick(event) {
     for (let i = 0; i < travelArray.length; i++) {
         if (clickedTravel === travelArray[i].name) {
             travelArray[i].votes++;
+            console.log(travelArray)
         }
     }
 
@@ -99,6 +105,8 @@ function handleTravelClick(event) {
         // the round can continue
         renderVacation();
     } else {
+        // this removes the event listener in order to prevent continued voting.
+        myContainer.removeEventListener('click', handleTravelClick);
         // make the button clickable
         viewResultsBtn.addEventListener('click', viewResults);
         // stop the game and render the results
@@ -106,16 +114,17 @@ function handleTravelClick(event) {
 }
 
 // function selectRandomTravelNumber() {
-//   let randomNum;
-//   do {
-//     randomNum = Math.floor(Math.random() * travelArray.length);
-//   } while (travelArray.includes(randomNum));
-//   return randomNum;
-// }
-// function selectRandomTravelNumber() {
-//     return Math.floor(Math.random() * travelArray.length);
-// }
-// When the very first time the code loads what is the value of the array? Empty array, not Nothing.
-
-
-renderVacation();
+    //   let randomNum;
+    //   do {
+        //     randomNum = Math.floor(Math.random() * travelArray.length);
+        //   } while (travelArray.includes(randomNum));
+        //   return randomNum;
+        // }
+        // function selectRandomTravelNumber() {
+            //     return Math.floor(Math.random() * travelArray.length);
+            // }
+            // When the very first time the code loads what is the value of the array? Empty array, not Nothing.
+            
+            
+            renderVacation();
+            myContainer.addEventListener('click', handleTravelClick);
