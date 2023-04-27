@@ -11,19 +11,14 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div id=“dropdown-menu” class=“dropdown-menu”>
-                <a href=“index.html”>Home Base</a>
-                <a href=“result.html”>Where I'm Going</a>
-                <a href=“about.html”>Meet the Minds Behind the Scenes</a>
-            </div>
-        </nav>
+    <header id = indexHeader>
+        <img src="img/Developer/LazyLogo.png" id="lazyLogo">
+        <h1 id="h1Index"> Welcome User! </h1>
     </header>
-    <main>
+    <main id="indexMain">
         <form id="userName">
             <fieldset>
-                <legend>What's Your 'Go Bye', Friend?</legend>
+                <legend>Get Personalized Travel Info!</legend>
                 <label>User Name
                     <input name="name" type="text" required />
                 </label>
@@ -37,31 +32,24 @@
                     <input name="lastDestination" type="text" />
                 </label>
             </fieldset>
-            <div>
-                <button type="submit">Full Send</button>
-                <button type="reset">Clear</button>
-            </div>
+       
         </form>
         <div id="introduction">
-            <h1>Webiste Introduction</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint rerum inventore nulla? Impedit et
-                laboriosam ipsa optio delectus possimus doloribus nihil ut? Voluptates, dignissimos amet! Provident
-                dignissimos perspiciatis quaerat quasi?</p>
+            <h2>Webiste Introduction</h2>
+            <p id="pIntroduction">solves the problem of lack of travel planning and inspires users to travel more by selling them a dream of a once-in-a-lifetime trip. The application uses a selection of randomly generated images to showcase a range of travel destinations and experiences.</p>
         </div>
         <section id="imgContainer">
                 <img id = "vacationPicOne" src="" alt="">
                 <img id = "vacationPicTwo" src="" alt="">
                 <img id = "vacationPicThree" src="" alt="">
         </section>
-
-        <!-- <div id="img">
-            <img id="img1" src="https://place-hold.it/240x225/ddd" alt="holder">
-            <img id="img2" src="https://place-hold.it/240x225/ddd" alt="holder">
-            <img id="img3" src="https://place-hold.it/240x225/ddd" alt="holder">
-        </div> -->
         <div id="btnContainer">
-            <button id="viewResultsBtn">View My Results</button>
+            <a href=results.html><button id="viewResultsBtn">View My Results</button></a>
             <button id="resetBtn">Reset it All! </button>
+            <a href=“about.html” id="aAboutUsLink">Meet the Minds Behind the Scenes</a>
+        </div>
+
+        <div>
         </div>
     </main>
 
@@ -69,12 +57,7 @@
 
     <script src="js/app.js"></script>
     <footer>
-        <nav>
-            <a href=“index.html”>Home Base</a>
-            <a href=“result.html”>Where I'm Going</a>
-            <a href=“about.html”>Meet the Minds Behind the Scenes</a>
-            </div>
-        </nav>
+
     </footer>
 </body>
 
