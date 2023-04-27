@@ -15,5 +15,7 @@ The MVP for TravelExplore will include a homepage where users can enter their de
 What is the minimum required for you to present on your demo day?
 To present on the demo day, we need to have a functional homepage that accepts user inputs and displays recommendations based on their preferences. We also need to have a basic database of destinations.
 
-![Domain Model](img/domainModel.png)
+![Screenshot 2023-04-25 122320](https://user-images.githubusercontent.com/126429063/234956378-5da3b543-9847-4083-a546-613b2f808f3f.png)
+
+
 ![Lazy Logo](img/LazyLogo.png)
