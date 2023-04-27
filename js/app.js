@@ -11,7 +11,7 @@ let randomArray = [];
 // } else 
 
 let counter = 0;
-let maxCounter = 30;
+let maxCounter = 29;
 
 // quereyselector would need a # or CSS selector.
 // getelementByID just needs the ID of the element.
@@ -91,7 +91,7 @@ function renderVacation() {
 
 // create event.handler
 function handleTravelClick(event) {
-    console.log(travelArray)
+    console.log(travelArray);
     counter++;
     console.log(event.target.alt);
     let clickedTravel = event.target.alt;
@@ -99,23 +99,25 @@ function handleTravelClick(event) {
     for (let i = 0; i < travelArray.length; i++) {
         if (clickedTravel === travelArray[i].name) {
             travelArray[i].votes++;
-            console.log(travelArray)
+            console.log(travelArray);
         }
-    }
 
-    // check to see if the round has ended
-    if (counter < maxCounter) {
-        // the round can continue
-        renderVacation();
-    } else {
-        // this removes the event listener in order to prevent continued voting.
-        myContainer.removeEventListener('click', handleTravelClick);
-        // make the button clickable
-        viewResultsBtn.addEventListener('click', viewResults);
-        // stop the game and render the results
+        // check to see if the round has ended
+        if (counter < maxCounter) {
+            // the round can continue
+            renderVacation();
+        } else {
+            // this removes the event listener in order to prevent continued voting.
+            myContainer.removeEventListener('click', handleTravelClick);
+            // make the button clickable
+            viewResultsBtn.addEventListener('click', viewResults);
+            // stop the game and render the results
+
+        }
+        let stringifyTravelArray = JSON.stringify(travelArray);
+        localStorage.setItem('travelArray', stringifyTravelArray);
     }
 }
-
 // function selectRandomTravelNumber() {
 //   let randomNum;
 //   do {
@@ -131,3 +133,4 @@ function handleTravelClick(event) {
 
 renderVacation();
 myContainer.addEventListener('click', handleTravelClick);
+
