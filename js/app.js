@@ -31,26 +31,25 @@ function Vacation(name, fileName, fileExtension = 'png') {
 }
 
 function createContinent() {
-  // 24 instances
-  const continentArray = ['aztec', 'california', 'candyland', 'ecuador', 'everest', 'france', 'germany', 'harbor', 'italy', 'lithuania', 'mayan', 'mexico', 'norway', 'paris', 'rome', 'sicily', 'switzerland', 'thailand', 'Travel1', 'Travel2', 'Travel3', 'Travel4', 'Travel5', 'viet'];
+    // 24 instances
+    const continentArray = ['aztec', 'california', 'candyland', 'ecuador', 'everest', 'france', 'germany', 'harbor', 'italy', 'lithuania', 'mayan', 'mexico', 'norway', 'paris', 'rome', 'sicily', 'switzerland', 'thailand', 'Travel1', 'Travel2', 'Travel3', 'Travel4', 'Travel5', 'viet'];
 
-  // JPEG: aztec, thailand, viet
+    // JPEG: aztec, thailand, viet
 
-  // PNG: california, ecuador, everest, france, germany,  harbor, italy, lithuania, mayan, mexico, norway, paris, rome, sicily, switzerland
+    // PNG: california, ecuador, everest, france, germany,  harbor, italy, lithuania, mayan, mexico, norway, paris, rome, sicily, switzerland
 
-  // JPG: candyland, Travel 1-5, 
+    // JPG: candyland, Travel 1-5, 
 
-  for (let i = 0; i < continentArray.length; i++) {
-    if (['aztec', 'thailand', 'viet'].includes(continentArray[i])) {
-      travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpeg'))
-    } else if (['candyland', 'Travel1', 'Travel2', 'Travel3', 'Travel4', 'Travel5'].includes(continentArray[i])) {
-      travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpg'))
-    } else {
-      travelArray.push(new Vacation
-        (continentArray[i], continentArray[i]))
+    for (let i = 0; i < continentArray.length; i++) {
+        if (['aztec', 'thailand', 'viet'].includes(continentArray[i])) {
+            travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpeg'));
+        } else if (['candyland', 'Travel1', 'Travel2', 'Travel3', 'Travel4', 'Travel5'].includes(continentArray[i])) {
+            travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpg'));
+        } else {
+            travelArray.push(new Vacation(continentArray[i], continentArray[i]));
+        }
     }
-  }
-  console.log(travelArray)
+    console.log(travelArray);
 }
 createContinent();
 
@@ -66,54 +65,56 @@ createContinent();
 
 
 function randomNumberGenerator() {
-  return Math.floor(Math.random() * travelArray.length);
+    return Math.floor(Math.random() * travelArray.length);
 }
 
 function renderVacation() {
-  while (randomArray.length < 4) {
-    let randomNum = randomNumberGenerator();
-    if (!randomArray.includes(randomNum)) {
-      randomArray.push(randomNum);
+    while (randomArray.length < 4) {
+        let randomNum = randomNumberGenerator();
+        if (!randomArray.includes(randomNum)) {
+            randomArray.push(randomNum);
+        }
     }
-  }
 
-  let imgOneIndex = randomArray.shift();
-  let imgTwoIndex = randomArray.shift();
-  let imgThreeIndex = randomArray.shift();
+    let imgOneIndex = randomArray.shift();
+    let imgTwoIndex = randomArray.shift();
+    let imgThreeIndex = randomArray.shift();
 
-  vacationPicOne.src = travelArray[imgOneIndex].src;
-  vacationPicOne.alt = travelArray[imgOneIndex].name;
-  vacationPicTwo.src = travelArray[imgTwoIndex].src;
-  vacationPicTwo.alt = travelArray[imgTwoIndex].name;
-  vacationPicThree.src = travelArray[imgThreeIndex].src;
-  vacationPicThree.alt = travelArray[imgThreeIndex].name;
+    vacationPicOne.src = travelArray[imgOneIndex].src;
+    vacationPicOne.alt = travelArray[imgOneIndex].name;
+    vacationPicTwo.src = travelArray[imgTwoIndex].src;
+    vacationPicTwo.alt = travelArray[imgTwoIndex].name;
+    vacationPicThree.src = travelArray[imgThreeIndex].src;
+    vacationPicThree.alt = travelArray[imgThreeIndex].name;
 }
 
 // create event.handler
 function handleTravelClick(event) {
-  console.log(travelArray)
-  counter++;
-  console.log(event.target.alt);
-  let clickedTravel = event.target.alt;
-  // find a the duck instance in the duck array whose name property equals the clickedTravel value.
-  for (let i = 0; i < travelArray.length; i++) {
-    if (clickedTravel === travelArray[i].name) {
-      travelArray[i].votes++;
-      console.log(travelArray)
+    console.log(travelArray);
+    counter++;
+    console.log(event.target.alt);
+    let clickedTravel = event.target.alt;
+    // find a the duck instance in the duck array whose name property equals the clickedTravel value.
+    for (let i = 0; i < travelArray.length; i++) {
+        if (clickedTravel === travelArray[i].name) {
+            travelArray[i].votes++;
+            console.log(travelArray);
+        }
     }
-  }
 
-  // check to see if the round has ended
-  if (counter < maxCounter) {
-    // the round can continue
-    renderVacation();
-  } else {
-    // this removes the event listener in order to prevent continued voting.
-    myContainer.removeEventListener('click', handleTravelClick);
-    // make the button clickable
-    viewResultsBtn.addEventListener('click', viewResults);
-    // stop the game and render the results
-  }
+    // check to see if the round has ended
+    if (counter < maxCounter) {
+        // the round can continue
+        renderVacation();
+    } else {
+        // this removes the event listener in order to prevent continued voting.
+        myContainer.removeEventListener('click', handleTravelClick);
+        // make the button clickable
+        viewResultsBtn.addEventListener('click', viewResults);
+        // stop the game and render the results
+    }
+    let stringifyTravelArray = JSON.stringify(travelArray);
+  localStorage.setItem('travelArray', stringifyTravelArray);
 }
 
 // function selectRandomTravelNumber() {
