@@ -11,7 +11,7 @@ let randomArray = [];
 // } else 
 
 let counter = 0;
-let maxCounter = 30;
+let maxCounter = 29;
 
 // quereyselector would need a # or CSS selector.
 // getelementByID just needs the ID of the element.
@@ -24,10 +24,10 @@ let vacationPicThree = document.getElementById('vacationPicThree');
 
 // slashes break deploument on github pages
 function Vacation(name, fileName, fileExtension = 'png') {
-  this.name = name;
-  this.fileName = fileName;
-  this.src = `img/${fileName}.${fileExtension}`;
-  this.votes = 0;
+    this.name = name;
+    this.fileName = fileName;
+    this.src = `img/${fileName}.${fileExtension}`;
+    this.votes = 0;
 }
 
 function createContinent() {
@@ -42,11 +42,12 @@ function createContinent() {
 
     for (let i = 0; i < continentArray.length; i++) {
         if (['aztec', 'thailand', 'viet'].includes(continentArray[i])) {
-            travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpeg'));
+            travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpeg'))
         } else if (['candyland', 'Travel1', 'Travel2', 'Travel3', 'Travel4', 'Travel5'].includes(continentArray[i])) {
-            travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpg'));
+            travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpg'))
         } else {
-            travelArray.push(new Vacation(continentArray[i], continentArray[i]));
+            travelArray.push(new Vacation
+                (continentArray[i], continentArray[i]))
         }
     }
     console.log(travelArray);
@@ -100,23 +101,23 @@ function handleTravelClick(event) {
             travelArray[i].votes++;
             console.log(travelArray);
         }
-    }
 
-    // check to see if the round has ended
-    if (counter < maxCounter) {
-        // the round can continue
-        renderVacation();
-    } else {
-        // this removes the event listener in order to prevent continued voting.
-        myContainer.removeEventListener('click', handleTravelClick);
-        // make the button clickable
-        viewResultsBtn.addEventListener('click', viewResults);
-        // stop the game and render the results
+        // check to see if the round has ended
+        if (counter < maxCounter) {
+            // the round can continue
+            renderVacation();
+        } else {
+            // this removes the event listener in order to prevent continued voting.
+            myContainer.removeEventListener('click', handleTravelClick);
+            // make the button clickable
+            viewResultsBtn.addEventListener('click', viewResults);
+            // stop the game and render the results
+
+        }
+        let stringifyTravelArray = JSON.stringify(travelArray);
+        localStorage.setItem('travelArray', stringifyTravelArray);
     }
-    let stringifyTravelArray = JSON.stringify(travelArray);
-  localStorage.setItem('travelArray', stringifyTravelArray);
 }
-
 // function selectRandomTravelNumber() {
 //   let randomNum;
 //   do {
