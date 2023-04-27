@@ -1,85 +1,109 @@
 'use strict';
 
+// travelArray handles ALL travel images that pass through the website
 let travelArray = [];
+// While the randomArray sets the random image in the index to be selected.
 let randomArray = [];
 
 let counter = 0;
 
 let myContainer = document.getElementById('#imgContainer');
+
 let vacationPicOne = document.getElementById('vacationPicOne');
 let vacationPicTwo = document.getElementById('vacationPicTwo');
 let vacationPicThree = document.getElementById('vacationPicThree');
 
-function Vacation(name, fileName, fileExtension = 'jpg') {
+
+
+function Vacation(name, fileName, fileExtension = 'png') {
     this.name = name;
     this.fileName = fileName;
-    this.src = `./img/${this.fileName}.${fileExtension}`;
+    this.src = `/img/${fileName}.${fileExtension}`;
     this.votes = 0;
-
-    // this.render = function() {
-    //   let container = document.querySelector('#imgContainer');
-    //   let image1 = document.getElementById('#imgContainer');
-
-
-
-    //   let img = document.createElement('img');
-    //   img.src = this.src;
-    //   container.append(img);
-    // }
 }
 
-function makeTravelArray() {
-    let travel1 = new Vacation('ireland', 'travel1');
-    let travel2 = new Vacation('switzerland', 'travel2');
-    let travel3 = new Vacation('mexico', 'travel3');
-    let travel4 = new Vacation('zimbabwa', 'travel4');
-    let travel5 = new Vacation('cockney', 'travel5');
+function createContinent() {
 
-    travelArray.push(travel1, travel2, travel3, travel4, travel5);
-}
-// function renderVacation(img1, img2, img3) {
-//   let container = document.querySelector('#imgContainer');
-//   container.innerHTML = '';
-//   for (let i = 0; i < travelArray.length; i++) {
-//     // console.log('inside of the for loop');
-//     let name = travelArray[i].name;
-//     // console.log(name);
-//     if (name === img1 || name === img2 || name === img3) {
-//       console.log('inside of the if statement');
-//       travelArray[i].render();
-//       // this.render(travelArray[i]);
-//     }
-//   }
-// }
-function randomNumberGenerator () {
-  return Math.floor(Math.random() * travelArray.length);
-}
+    const continentArray = ['aztec', 'california', 'candyland', 'ecuador', 'everest', 'france', 'germany', 'harbor', 'italy', 'lithuania', 'mayan', 'mexico', 'norway', 'paris', 'rome', 'sicily', 'switzerland', 'thailand', 'Travel1', 'Travel2', 'Travel3', 'Travel4', 'Travel5', 'viet'];
 
-function renderVacation(){
-  while (randomArray.length < 4) {
-    let randomNum = randomNumberGenerator();
-    if (!randomArray.includes(randomNum)) {
-      randomArray.push(randomNum);
+    // JPEG: aztec, thailand, viet
+
+    // PNG: california, ecuador, everest, france, germany,  harbor, italy, lithuania, mayan, mexico, norway, paris, rome, sicily, switzerland
+
+    // JPG: candyland, Travel 1-5, 
+
+    for (let i = 0; i < continentArray.length; i++) {
+        if (['aztec', 'thailand', 'viet'].includes(continentArray[i])) {
+            travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpeg'))
+    } else if (['candyland', 'Travel1', 'Travel2', 'Travel3', 'Travel4', 'Travel5'].includes(continentArray[i])) {
+            travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpg'))
+        } else { travelArray.push(new Vacation
+            (continentArray[i], continentArray[i]))}
     }
-  }
-  console.log(travelArray);
+}
+createContinent();
 
-  let imgOneIndex = randomArray.shift();
-  let imgTwoIndex = randomArray.shift();
-  let imgThreeIndex = randomArray.shift();
-  
-  vacationPicOne.src = travelArray[imgOneIndex].src;
-  vacationPicOne.alt = travelArray[imgOneIndex].name;
-  travelArray[imgOneIndex].votes++;
-  vacationPicTwo.src = travelArray[imgTwoIndex].src;
-  vacationPicTwo.alt = travelArray[imgTwoIndex].name;
-  travelArray[imgTwoIndex].votes++;
-  vacationPicThree.src = travelArray[imgThreeIndex].src;
-  vacationPicThree.alt = travelArray[imgThreeIndex].name;
-  travelArray[imgThreeIndex].votes++;
+// function makeTravelArray() {
+//     let travel1 = new Vacation('ireland', 'Travel1');
+//     let travel2 = new Vacation('switzerland', 'Travel2');
+//     let travel3 = new Vacation('mexico', 'Travel3');
+//     let travel4 = new Vacation('zimbabwa', 'Travel4');
+//     let travel5 = new Vacation('cockney', 'Travel5');
+
+//     travelArray.push(travel1, travel2, travel3, travel4, travel5);
+// }
+
+
+function randomNumberGenerator() {
+    return Math.floor(Math.random() * travelArray.length);
 }
 
+function renderVacation() {
+    while (randomArray.length < 4) {
+        let randomNum = randomNumberGenerator();
+        if (!randomArray.includes(randomNum)) {
+            randomArray.push(randomNum);
+        }
+    }
+    console.log(travelArray);
 
+    let imgOneIndex = randomArray.shift();
+    let imgTwoIndex = randomArray.shift();
+    let imgThreeIndex = randomArray.shift();
+
+    vacationPicOne.src = travelArray[imgOneIndex].src;
+    vacationPicOne.alt = travelArray[imgOneIndex].name;
+    travelArray[imgOneIndex].votes++;
+    vacationPicTwo.src = travelArray[imgTwoIndex].src;
+    vacationPicTwo.alt = travelArray[imgTwoIndex].name;
+    travelArray[imgTwoIndex].votes++;
+    vacationPicThree.src = travelArray[imgThreeIndex].src;
+    vacationPicThree.alt = travelArray[imgThreeIndex].name;
+    travelArray[imgThreeIndex].votes++;
+}
+
+// create event.handler
+function handleTravelClick(event) {
+    counter++;
+    console.log(event.target.alt);
+    let clickedTravel = event.target.alt;
+    // find a the duck instance in the duck array whose name property equals the clickedTravel value.
+    for (let i = 0; i < travelArray.length; i++) {
+        if (clickedTravel === travelArray[i].name) {
+            travelArray[i].votes++;
+        }
+    }
+
+    // check to see if the round has ended
+    if (counter < maxCounter) {
+        // the round can continue
+        renderVacation();
+    } else {
+        // make the button clickable
+        viewResultsBtn.addEventListener('click', viewResults);
+        // stop the game and render the results
+    }
+}
 
 // function selectRandomTravelNumber() {
 //   let randomNum;
@@ -94,5 +118,4 @@ function renderVacation(){
 // When the very first time the code loads what is the value of the array? Empty array, not Nothing.
 
 
-makeTravelArray();
-renderVacation ();
+renderVacation();

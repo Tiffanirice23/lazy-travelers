@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # lazy-travelers
 
 Contributors: 
@@ -19,4 +17,3 @@ To present on the demo day, we need to have a functional homepage that accepts u
 
 ![Domain Model](img/domainModel.png)
 ![Lazy Logo](img/LazyLogo.png)
->>>>>>> origin
