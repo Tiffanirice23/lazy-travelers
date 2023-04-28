@@ -1,4 +1,4 @@
-‘use strict’;
+'use strict';
 // let resultsVote = 7;
 // let productIndexArray = [];
 // let explore = new Travel ();
@@ -12,13 +12,14 @@ Highest votes are
 if statement helper
 */
 let travelArray = [];
-let savedArray = localStorage.getItem(‘travelArray’);
+let savedArray = localStorage.getItem('travelArray');
 if (savedArray) {
   travelArray = JSON.parse(savedArray);
 }
 let currentHighest = 0;
 let highestVotesGetter = {};
 for (let i = 0; i < travelArray.length; i++) {
+
     if (travelArray[i].votes > currentHighest) {
         currentHighest = travelArray[i].votes;
         highestVotesGetter = travelArray[i];
@@ -26,3 +27,15 @@ for (let i = 0; i < travelArray.length; i++) {
 }
 console.log(highestVotesGetter.src);
 document.getElementById('resultsImg').src = highestVotesGetter.src;
+=======
+
+  if (travelArray[i].votes > currentHighest) {
+    currentHighest = travelArray[i].votes;
+    highestVotesGetter = travelArray[i];
+  }
+}
+console.log(highestVotesGetter.src);
+document.getElementById('resultsImg').src = highestVotesGetter.src;
+
+
+
