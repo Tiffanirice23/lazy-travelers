@@ -1,3 +1,5 @@
+/* // Global Rules */
+
 body {
   background-color: rgba(11, 83, 207);
   background-image:url(../img/background3.jpeg);
@@ -8,73 +10,61 @@ body {
   margin-right: 30px;
 }
 
-/* #img {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: auto;
-  margin-top: 45px;
-} */
 
- footer {
-  text-align: center;
-  width: 100%;
-  background-color: rgb(234, 217, 217);
-  color: rgb(141, 135, 135);
-  text-align: center;
-  /* line-height: 0.9; */
-} */
+#lazyLogo {
+  z-index: 2;
+  width: 150px;
+  opacity: .5;
+  height: 90px;
+  margin-bottom: 80px;
+}
+
+footer {
+ text-align: center;
+ width: 100%;
+ background-color: rgb(234, 217, 217);
+ color: rgb(141, 135, 135);
+ text-align: center;
+ /* line-height: 0.9; */
+} 
+
+
+/* Index.html Rules */
+
+#indexbody {
+}
 
 #indexFooter {
   margin-left: 50px;
   background-color: brown;
 }
 
-#topAboutUs {
-  background-color: rgb(107, 111, 107);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 30px;
-}
-
-
-
-#bottomAboutUs {
-  background-color: rgb(107, 111, 107);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 30px;
-}
-
-.navintroduction {
-  margin-left: 50px;
-  width: 100px;
-  overflow-y: auto;
-  width: 220px;
-  max-height: 200px;
-  margin-bottom: 30px;
-}
-
-h3 {
-  text-align: center;
-  font-size: larger;
-  margin-top: 30px;
-}
-
-section>img {
+#vacationPicOne {
   width: 30%;
-  height: 400px;
-  margin: 10px;
-  margin-left: 40px;
-  margin-top: 90px;
+  height: 600px;
+  margin: 20px;
+  margin-top: 80px;
 }
+
+#vacationPicTwo{
+  width: 30%;
+  height: 600px;
+  margin: 20px;
+}
+
+
+#vacationPicThree {
+  width: 30%;
+  height: 600px;
+  margin: 20px;
+} 
+
 
 section > img:hover{
   -webkit-box-shadow: 0px 0px 25px 35px rgba(78,15,124,0.85); 
   box-shadow: 0px 0px 20px 25px rgba(255, 237, 150, 0.85);
 }
+
 #userName {
   margin-left: 130px;
 }
@@ -94,13 +84,12 @@ section > img:hover{
   margin-left: 450px;
 }
 
-/* #indexMain {
-  opacity: .8;
-} */
+
 #btnContainer {
   margin-top: 150px;
   width: 100%;
 }
+
 
 #viewResultsBtn {
   margin-left: 100px;
@@ -121,6 +110,82 @@ section > img:hover{
   background-color: rgb(0, 204, 255);
 }
 
+
+legend {
+  font-size: large;
+  margin-left: 600px;
+  padding: 20px;
+}
+
+label {
+  margin-left: 90px;
+}
+
+/* About Us Html Rules */
+
+#topAboutUs {
+  background-color: rgb(241, 235, 226);
+  border: 2px solid gray;
+  opacity: .8;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+
+
+#bottomAboutUs {
+  background-color: rgb(241, 235, 226);
+  border: 2px solid gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.navintroduction {
+  margin-left: 50px;
+  width: 100px;
+  overflow-y: auto;
+  width: 220px;
+  margin-left: 15px;
+  max-height: 200px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+#homeBtn {
+  float: right;
+  margin-top: 150px;
+  margin-left: 310px;
+}
+
+#arthurProfile{
+  margin-left: 60px;
+}
+
+#tiffaniProfile{
+  margin-right: 60px;
+}
+
+#jaredProfile {
+  margin-left: 60px;
+} 
+
+#andrewProfile {
+  margin-right: 60px;
+}
+
+.usPictures {
+  width: 250px;
+  height: 320px;
+  border-radius: 20%;
+  border: 2px solid rgb(0, 0, 0); 
+}
+
 #aAboutUsLink {
   float: right;
   width: 300px;
@@ -128,12 +193,16 @@ section > img:hover{
   color: red;
 }
 
-legend {
-font-size: large;
-margin-left: 600px;
-padding: 20px;
+.usNames {
+  text-align: center;
+  font-size: larger;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-label {
-  margin-left: 90px;
+#aboutUs {
+  font-size: 50px;
+  margin-left: 440px;
+  margin-top: 50px;
+
 }

@@ -133,4 +133,3 @@ function handleTravelClick(event) {
 
 renderVacation();
 myContainer.addEventListener('click', handleTravelClick);
-
