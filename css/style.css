@@ -38,8 +38,6 @@ body {
   margin: 30px;
 }
 
-
-
 #bottomAboutUs {
   background-color: rgb(107, 111, 107);
   display: flex;
@@ -56,6 +54,7 @@ body {
   max-height: 200px;
   margin-bottom: 30px;
 }
+
 
 h3 {
   text-align: center;
@@ -135,5 +134,41 @@ padding: 20px;
 }
 
 label {
-  margin-left: 90px;
+margin: auto;
+}
+
+div > #resultsImg{
+  width: 100%;
+  /* position: absolute; 
+  bottom: 5px; 
+  left: 5px;  */
+}
+
+p {
+  font-size: large;
+  /* position: absolute;  */
+  right: 5px; 
+}
+
+#resultsTopSection {
+  width: 90%;
+}
+
+#resultsBottomSection {
+  /* color: */
+  padding-left: 5rem
+  /* float: right; */
+}
+
+#resultsBottomSection a {
+  color:blanchedalmond;
+}
+
+.resultBookingSection {
+  display: flex;
+}
+
+#imgContainer {
+  padding-right: 1rem;
+  display: flex;
 }

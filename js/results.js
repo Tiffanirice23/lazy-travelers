@@ -20,18 +20,15 @@ if (savedArray) {
 }
 
 let currentHighest = 0;
-function mostVotes() {
-  for (let i = 0; i < travelArray.length; i++) {
+let highestVotesGetter = {};
+for (let i = 0; i < travelArray.length; i++) {
     if (travelArray[i].votes > currentHighest) {
-      currentHighest = travelArray[i].votes;
-      console.log(travelArray[i]);
-      return travelArray[i].src;
+        currentHighest = travelArray[i].votes;
+        highestVotesGetter = travelArray[i];
     }
-  }
 }
-
-mostVotes();
-
+console.log(highestVotesGetter.src);
+document.getElementById('resultsImg').src = highestVotesGetter.src;
 
 
 // 3:30 work on presentation 4pm meeting 
