@@ -8,6 +8,8 @@ body {
   max-width: 960;
   margin-left: 30px;
   margin-right: 30px;
+  margin-top: 0;
+  padding-bottom: 75px;
 }
 
 
@@ -17,6 +19,9 @@ body {
   opacity: .5;
   height: 90px;
   margin-bottom: 80px;
+  position: absolute;
+  left: 50px;
+  top: 50px;
 }
 
 footer {
@@ -31,62 +36,53 @@ footer {
 
 /* Index.html Rules */
 
-#indexbody {
-}
-
 #indexFooter {
   margin-left: 50px;
   background-color: brown;
 }
 
-#vacationPicOne {
+#imgContainer img {
   width: 30%;
-  height: 600px;
+  height: 400px;
+  object-fit: cover;
   margin: 20px;
-  margin-top: 80px;
-}
-
-#vacationPicTwo{
-  width: 30%;
-  height: 600px;
-  margin: 20px;
-}
-
-
-#vacationPicThree {
-  width: 30%;
-  height: 600px;
-  margin: 20px;
+  margin-top: 50px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 } 
 
-
-section > img:hover{
-  -webkit-box-shadow: 0px 0px 25px 35px rgba(78,15,124,0.85); 
-  box-shadow: 0px 0px 20px 25px rgba(255, 237, 150, 0.85);
+#imgContainer img:hover{
+  -webkit-box-shadow: 0px 0px 28px 0px rgba(255, 237, 150, 0.85);;
+  -moz-box-shadow: 0px 0px 28px 0px rgba(255, 237, 150, 0.85);;
+  box-shadow: 0px 0px 28px 0px rgba(255, 237, 150, 0.85);;
+  cursor: pointer;
 }
 
 #userName {
-  margin-left: 130px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-#indexHeader {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 50px;
+header {
+  display: block;
+  width: 100%;
+  height: 200px;
+  position: relative;
 }
 
-#h1Index {
+h1 {
   font-weight: bolder;
   font-size: larger;
-  font-size: 30px;
-  margin-top: 50px;
-  margin-right: 50px;
-  margin-left: 450px;
+  font-size: 52px;
+  width: 100%;
+  text-align: center;
+  padding-top: 75px;
 }
 
 
 #btnContainer {
-  margin-top: 150px;
+  margin-top: 50px;
   width: 100%;
 }
 
@@ -108,33 +104,50 @@ section > img:hover{
 
 #indexMain {
   background-color: rgb(0, 204, 255);
+  padding: 25px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 
 legend {
-  font-size: large;
+  font-size: 20px;
   margin-left: 600px;
   padding: 20px;
 }
 
 label {
-  margin-left: 90px;
+  margin-left: 50px;
 }
 
 /* About Us Html Rules */
 
 #topAboutUs {
-  background-color: rgb(241, 235, 226);
-  border: 2px solid gray;
   opacity: .8;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-right: 30px;
-  margin-left: 30px;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
 }
 
+#topAboutUs div {
+  margin: 50px;
+  width: 300px;
+}
 
+.subSection {
+  height: 400px;
+}
+
+#aboutUsMain {
+  height: 1350px;
+  display: block;
+  background-color: rgb(241, 235, 226);
+  border: 2px solid gray;
+}
 
 #bottomAboutUs {
   background-color: rgb(241, 235, 226);
@@ -150,7 +163,7 @@ label {
   margin-left: 50px;
   width: 100px;
   overflow-y: auto;
-  width: 220px;
+  width: 100%;
   margin-left: 15px;
   max-height: 200px;
   margin-bottom: 30px;
@@ -159,28 +172,12 @@ label {
 
 #homeBtn {
   float: right;
-  margin-top: 150px;
+  margin-top: 50px;
   margin-left: 310px;
 }
 
-#arthurProfile{
-  margin-left: 60px;
-}
-
-#tiffaniProfile{
-  margin-right: 60px;
-}
-
-#jaredProfile {
-  margin-left: 60px;
-} 
-
-#andrewProfile {
-  margin-right: 60px;
-}
-
 .usPictures {
-  width: 250px;
+  width: 100%;
   height: 320px;
   border-radius: 20%;
   border: 2px solid rgb(0, 0, 0); 
@@ -194,15 +191,13 @@ label {
 }
 
 .usNames {
-  text-align: center;
+  text-align: left;
   font-size: larger;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-#aboutUs {
-  font-size: 50px;
-  margin-left: 440px;
-  margin-top: 50px;
-
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
