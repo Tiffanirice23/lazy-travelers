@@ -5,10 +5,6 @@ let travelArray = [];
 // While the randomArray sets the random image in the index to be selected.
 let randomArray = [];
 
-// let travelArrayFromStorage = localstorage.getItem('travelArray')
-// if (travelArrayFromStorage){
-//     travelArray = JSON.parse(travelArrayFromStorage);
-// } else 
 
 let counter = 0;
 let maxCounter = 29;
@@ -27,12 +23,15 @@ function Vacation(name, fileName, fileExtension = 'png') {
     this.name = name;
     this.fileName = fileName;
     this.src = `img/${fileName}.${fileExtension}`;
+    this.img = new Image();
     this.votes = 0;
+
+    this.img.src = this.src;
 }
 
 function createContinent() {
     // 24 instances
-    const continentArray = ['aztec', 'california', 'candyland', 'ecuador', 'everest', 'france', 'germany', 'harbor', 'italy', 'lithuania', 'mayan', 'mexico', 'norway', 'paris', 'rome', 'sicily', 'switzerland', 'thailand', 'Travel1', 'Travel2', 'Travel3', 'Travel4', 'Travel5', 'viet'];
+    const continentArray = ['aztec', 'california', 'candyland', 'ecuador', 'everest', 'italy', 'mayan', 'mexico', 'norway', 'paris', 'rome', 'sicily', 'switzerland'];
 
     // JPEG: aztec, thailand, viet
 
@@ -41,28 +40,19 @@ function createContinent() {
     // JPG: candyland, Travel 1-5, 
 
     for (let i = 0; i < continentArray.length; i++) {
-        if (['aztec', 'thailand', 'viet'].includes(continentArray[i])) {
-            travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpeg'))
-        } else if (['candyland', 'Travel1', 'Travel2', 'Travel3', 'Travel4', 'Travel5'].includes(continentArray[i])) {
-            travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpg'))
+        if (['aztec'].includes(continentArray[i])) {
+            travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpeg'));
+        } else if (['candyland'].includes(continentArray[i])) {
+            travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpg'));
         } else {
             travelArray.push(new Vacation
-                (continentArray[i], continentArray[i]))
+                (continentArray[i], continentArray[i]));
         }
     }
     console.log(travelArray);
 }
 createContinent();
 
-// function makeTravelArray() {
-//     let travel1 = new Vacation('ireland', 'Travel1');
-//     let travel2 = new Vacation('switzerland', 'Travel2');
-//     let travel3 = new Vacation('mexico', 'Travel3');
-//     let travel4 = new Vacation('zimbabwa', 'Travel4');
-//     let travel5 = new Vacation('cockney', 'Travel5');
-
-//     travelArray.push(travel1, travel2, travel3, travel4, travel5);
-// }
 
 
 function randomNumberGenerator() {
@@ -70,6 +60,10 @@ function randomNumberGenerator() {
 }
 
 function renderVacation() {
+
+    const imgContainer = document.getElementById('imgContainer');
+    imgContainer.innerHTML = '';
+
     while (randomArray.length < 4) {
         let randomNum = randomNumberGenerator();
         if (!randomArray.includes(randomNum)) {
@@ -81,12 +75,9 @@ function renderVacation() {
     let imgTwoIndex = randomArray.shift();
     let imgThreeIndex = randomArray.shift();
 
-    vacationPicOne.src = travelArray[imgOneIndex].src;
-    vacationPicOne.alt = travelArray[imgOneIndex].name;
-    vacationPicTwo.src = travelArray[imgTwoIndex].src;
-    vacationPicTwo.alt = travelArray[imgTwoIndex].name;
-    vacationPicThree.src = travelArray[imgThreeIndex].src;
-    vacationPicThree.alt = travelArray[imgThreeIndex].name;
+    imgContainer.append(travelArray[imgOneIndex].img);
+    imgContainer.append(travelArray[imgTwoIndex].img);
+    imgContainer.append(travelArray[imgThreeIndex].img);
 }
 
 // create event.handler
