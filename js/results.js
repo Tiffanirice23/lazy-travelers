@@ -19,16 +19,6 @@ if (savedArray) {
 let currentHighest = 0;
 let highestVotesGetter = {};
 for (let i = 0; i < travelArray.length; i++) {
-
-    if (travelArray[i].votes > currentHighest) {
-        currentHighest = travelArray[i].votes;
-        highestVotesGetter = travelArray[i];
-    }
-}
-console.log(highestVotesGetter.src);
-document.getElementById('resultsImg').src = highestVotesGetter.src;
-=======
-
   if (travelArray[i].votes > currentHighest) {
     currentHighest = travelArray[i].votes;
     highestVotesGetter = travelArray[i];
@@ -36,6 +26,3 @@ document.getElementById('resultsImg').src = highestVotesGetter.src;
 }
 console.log(highestVotesGetter.src);
 document.getElementById('resultsImg').src = highestVotesGetter.src;
-
-
-

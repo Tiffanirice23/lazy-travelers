@@ -5,20 +5,20 @@ body {
   background-image:url(../img/background3.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 960;
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-top: 0;
+  width: 90%;
+  height: 400px;
+  margin: 0 auto;
   padding-bottom: 75px;
+  max-height: 400px;
 }
 
 
 #lazyLogo {
   z-index: 2;
   width: 150px;
-  opacity: .5;
-  height: 90px;
-  margin-bottom: 80px;
+  /* opacity: .5; */
+  height: 70px;
+  margin-bottom: 10px;
   position: absolute;
   left: 50px;
   top: 50px;
@@ -43,7 +43,7 @@ footer {
 
 #imgContainer img {
   width: 30%;
-  height: 400px;
+  height: 300px;
   object-fit: cover;
   margin: 20px;
   margin-top: 50px;
@@ -68,17 +68,18 @@ footer {
 header {
   display: block;
   width: 100%;
-  height: 200px;
+  height: 100px;
   position: relative;
 }
 
 h1 {
   font-weight: bolder;
   font-size: larger;
-  font-size: 52px;
+  font-size: 40px;
   width: 100%;
   text-align: center;
-  padding-top: 75px;
+  padding-top: 25px;
+  margin-top: 10px;
 }
 
 
@@ -104,7 +105,8 @@ h1 {
 }
 
 #indexMain {
-  background-color: rgb(0, 204, 255);
+  background-color: rgb(127, 193, 240);
+  border: 3px solid white;
   padding: 25px;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
@@ -112,53 +114,13 @@ h1 {
 }
 
 
-legend {
-  font-size: 20px;
-  margin-left: 600px;
-  padding: 20px;
-}
-
-label {
-  margin-left: 50px;
-}
-
 /* About Us Html Rules */
 
-#topAboutUs {
-  opacity: .8;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 0 auto;
-  position: relative;
-  width: 100%;
-}
-
-#topAboutUs div {
-  margin: 50px;
-  width: 300px;
-}
 
 .subSection {
   height: 400px;
 }
 
-#aboutUsMain {
-  height: 1350px;
-  display: block;
-  background-color: rgb(241, 235, 226);
-  border: 2px solid gray;
-}
-
-#bottomAboutUs {
-  background-color: rgb(241, 235, 226);
-  border: 2px solid gray;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 30px;
-}
 
 .navintroduction {
   margin-left: 50px;
@@ -177,13 +139,6 @@ label {
   margin-left: 310px;
 }
 
-.usPictures {
-  width: 100%;
-  height: 320px;
-  border-radius: 20%;
-  border: 2px solid rgb(0, 0, 0); 
-}
-
 #aAboutUsLink {
   float: right;
   width: 300px;
@@ -191,23 +146,17 @@ label {
   color: red;
 }
 
-.usNames {
-  text-align: left;
-  font-size: larger;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
 
 h2 {
   font-size: 24px;
   margin-bottom: 20px;
 }
 
-div > #resultsImg{
-  width: 100%;
-  /* position: absolute; 
-  bottom: 5px; 
-  left: 5px;  */
+
+#introduction {
+  height: 30%;
+  border: 3px dotted rgb(153, 152, 151);
+  padding: 10px;
 }
 
 p {
@@ -216,23 +165,7 @@ p {
   right: 5px; 
 }
 
-#resultsTopSection {
-  width: 90%;
-}
 
-#resultsBottomSection {
-  /* color: */
-  padding-left: 5rem
-  /* float: right; */
-}
-
-#resultsBottomSection a {
-  color:blanchedalmond;
-}
-
-.resultBookingSection {
-  display: flex;
-}
 
 #imgContainer {
   padding-right: 1rem;
