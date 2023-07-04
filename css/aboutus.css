@@ -1,44 +1,72 @@
 #lazyLogo {
   z-index: 2;
   width: 150px;
-  opacity: .5;
+  /* opacity: .5; */
   height: 90px;
-  margin-bottom: 80px;
+  margin: 30px;
+
   position: absolute;
-  left: 50px;
-  top: 50px;
 }
 
 .navintroduction {
-  margin-left: 50px;
-  width: 100px;
+  width: 250px;
   overflow-y: auto;
-  width: 100%;
-  margin-left: 15px;
-  max-height: 200px;
-  margin-bottom: 30px;
-  margin-top: 20px;
+  max-height: 150px;
+  text-align: center;
+  margin: 20px; 
+  background-color: rgb(248, 248, 248);
+  padding: 10px;
 }
 
 .usPictures {
-  width: 100%;
-  height: 320px;
-  border-radius: 20%;
   border: 2px solid rgb(0, 0, 0); 
 }
 
+#jaredProfile {
+  list-style-type: disc;
+}
+
 .usNames {
-  text-align: left;
-  font-size: larger;
+  text-align: center;
+  font-size: 25px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
 #aboutUsMain {
-  height: 1350px;
   display: block;
-  background-color: rgb(241, 235, 226);
+  background-color: rgb(250, 219, 94);
   border: 2px solid gray;
+}
+
+body{
+  margin: 0 auto;
+  width: 90%;
+  background-image:url(../img/background3.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#usHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 80px;
+}
+
+#aboutUs {
+  margin: auto;
+  /* margin-left: 20px; */
+  font-size: 30px;
+  color: rgb(164, 164, 246);
+}
+
+#homeBtn {
+  margin-top: 20px;
+  color: purple;
+  font-size: 20px;
+  padding: 10px;
+
 }
 
 #aboutUsMain {
@@ -46,21 +74,18 @@
   /* justify-content: center; */
   margin: 0 auto;
   position: relative;
-  width: 100%;
+  /* width: 100%; */
 }
 
 #aboutUsMain div {
-  margin: 50px;
-  width: 300px;
+  /* margin: 50px;
+  width: 300px; */
   display: inline-block;
   text-align: center;
 }
 
-#aboutUsMain div img {
-  width: 350px;
-  height: auto;
-}
-
 #topAboutUs, #bottomAboutUs {
-  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
