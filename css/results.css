@@ -4,24 +4,30 @@
 }
 
 #resultsBottomSection {
-  padding-left: 5rem;
   margin: 0 auto;
-  border: 3px solid red;
-/* text-align: center; */
+  margin: 10px;
+  background-color: rgb(207, 233, 253);
+  border: 3px solid whitesmoke;
+  height: 580px;
+  width: 100%;
 }
 
 .resultBookingSection {
   display: flex;
 }
 
-#resultsUL a {
-  background-color: aliceblue;
-  color: black;
+#resultsUL {
+  /* color: black; */
+  /* border: 2px solid black; */
+  margin-top:130px;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
 }
 
 body {
   background-color: rgba(11, 83, 207);
-  background-image:url(../img/background3.jpeg);
+  background-image:url(../img/background1.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 90%;
@@ -31,21 +37,41 @@ body {
   max-height: 400px;
 }
 
+#linkContainer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  color:#022235;
+}
 
-h1 {
+#resultsP {
+  margin: 25px;
+  /* border: 1px solid black; */
+  font-size: 30px;
+}
+
+#indexRedirect, #aboutRedirect {
+  background-color: white;
+  margin: 20px;
+}
+
+#vacationName {
   font-weight: bolder;
   font-size: 40px;
   width: 100%;
   text-align: center;
   padding-top: 25px;
   margin-top: 10px;
-  /* margin: 0 auto; */
+  background-image: linear-gradient(to left, #06aaaa, #05456c);
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari/Chrome */
+  color: transparent;
 }
 
 
 #resultsImg {
   width: 700px;
   height: 600px;
-  border: 3px solid black;
+  border: 1px solid black;
   text-align: center;
 }
