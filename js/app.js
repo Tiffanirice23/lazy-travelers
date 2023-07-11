@@ -26,9 +26,9 @@ function Vacation(name, fileName, fileExtension = 'png') {
 }
 function createContinent() {
 	// 24 instances
-	const continentArray = ['aztec', 'california', 'candyland', 'ecuador', 'everest', 'italy', 'mayan', 'mexico', 'norway', 'paris', 'rome', 'sicily', 'switzerland'];
+	const continentArray = ['aztec', 'california', 'candyland', 'ecuador', 'everest', 'italy', 'mayan', 'mexico', 'norway', 'paris', 'rome', 'sicily', 'switzerland', '10waterfalltrail', 'bigfour', 'gasworks', 'kobutagarden', 'lakewatcom', 'mountains', 'oklahoma', 'oregonbeach', 'pensacola', 'pikeplace', 'portangeles', 'seattle', 'tamp', 'treeoflife', 'utah' ];
 	for (let i = 0; i < continentArray.length; i++) {
-		if (['aztec'].includes(continentArray[i])) {
+		if (['aztec', 'bigfour', 'gasworks', 'kobutagarden', 'lakewatcom', 'mountains', 'oklahoma', 'oregonbeach', 'pensacola', 'pikeplace', 'portangeles', 'seattle', 'tamp', 'treeoflife', 'utah', '10waterfalltrail'].includes(continentArray[i])) {
 			travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpeg'))
 		} else if (['candyland'].includes(continentArray[i])) {
 			travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpg'))

@@ -1,8 +1,8 @@
 /* // Global Rules */
 
 body {
-  background-color: rgba(11, 83, 207);
-  background-image:url(../img/background3.jpeg);
+  background-color: rgb(153, 174, 209);
+  background-image:url(../img/background1.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 90%;
@@ -17,11 +17,9 @@ body {
   z-index: 2;
   width: 150px;
   /* opacity: .5; */
-  height: 70px;
-  margin-bottom: 10px;
+  margin:10px;
   position: absolute;
-  left: 50px;
-  top: 50px;
+
 }
 
 footer {
@@ -54,9 +52,9 @@ footer {
 } 
 
 #imgContainer img:hover{
-  -webkit-box-shadow: 0px 0px 28px 0px rgba(255, 237, 150, 0.85);;
-  -moz-box-shadow: 0px 0px 28px 0px rgba(255, 237, 150, 0.85);;
-  box-shadow: 0px 0px 28px 0px rgba(255, 237, 150, 0.85);;
+  -webkit-box-shadow: 0px 0px 50px 0px rgba(244, 183, 77, 0.9);
+  -moz-box-shadow: 0px 0px 50px 0px rgba(244, 183, 77, 0.9);
+  box-shadow: 0px 0px 50px 0px rgba(244, 183, 77, 0.9);
   cursor: pointer;
 }
 
@@ -80,6 +78,10 @@ h1 {
   text-align: center;
   padding-top: 25px;
   margin-top: 10px;
+  background-image: linear-gradient(to left, #894f02, #183dd1);
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari/Chrome */
+  color: transparent;
 }
 
 
@@ -105,8 +107,8 @@ h1 {
 }
 
 #indexMain {
-  background-color: rgb(127, 193, 240);
-  border: 3px solid white;
+  background-color: rgb(207, 233, 253);
+  border: 3px solid whitesmoke;
   padding: 25px;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
@@ -114,24 +116,6 @@ h1 {
 }
 
 
-/* About Us Html Rules */
-
-
-.subSection {
-  height: 400px;
-}
-
-
-.navintroduction {
-  margin-left: 50px;
-  width: 100px;
-  overflow-y: auto;
-  width: 100%;
-  margin-left: 15px;
-  max-height: 200px;
-  margin-bottom: 30px;
-  margin-top: 20px;
-}
 
 
 #aAboutUsLink {
@@ -150,7 +134,7 @@ h2 {
 
 #introduction {
   height: 30%;
-  border: 3px dotted rgb(153, 152, 151);
+  border: 3px dotted rgb(252, 251, 249);
   padding: 10px;
 }
 
