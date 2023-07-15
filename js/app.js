@@ -26,9 +26,9 @@ function Vacation(name, fileName, fileExtension = 'png') {
 }
 function createContinent() {
 	// 24 instances
-	const continentArray = ['aztec', 'california', 'candyland', 'ecuador', 'everest', 'italy', 'mayan', 'mexico', 'norway', 'paris', 'rome', 'sicily', 'switzerland', '10waterfalltrail', 'bigfour', 'gasworks', 'kobutagarden', 'lakewatcom', 'mountains', 'oklahoma', 'oregonbeach', 'pensacola', 'pikeplace', 'portangeles', 'seattle', 'tamp', 'treeoflife', 'utah' ];
+	const continentArray = ['aztec national ruins monument', 'california', 'candyland', 'ecuador', 'everest', 'italy', 'The El Rey Ruins', 'mexico', 'norway', 'paris', 'rome', 'sicily', 'switzerland', '10 waterfall trail', 'big four ice caves', 'gas works park', 'the kobuta garden', 'lake watcom', 'mt. dickerman trail', 'oklahoma', 'cape kiwanda, oregon', 'the gulf coast', 'the pike place market', 'the salt creek campground', 'seattle waterfront', 'Tampa Bay', 'The Tree of Life', 'utah' ];
 	for (let i = 0; i < continentArray.length; i++) {
-		if (['aztec', 'bigfour', 'gasworks', 'kobutagarden', 'lakewatcom', 'mountains', 'oklahoma', 'oregonbeach', 'pensacola', 'pikeplace', 'portangeles', 'seattle', 'tamp', 'treeoflife', 'utah', '10waterfalltrail'].includes(continentArray[i])) {
+		if (['aztec national ruins monument', 'big four ice caves', 'gas works park', 'the kobuta garden', 'lake watcom', 'mt. dickerman trail', 'oklahoma', 'cape kiwanda, oregon', 'the gulf coast', 'the pike place market', 'the salt creek campground', 'seattle waterfront', 'Tampa Bay', 'The Tree of Life', 'utah', '10 waterfall trail'].includes(continentArray[i])) {
 			travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpeg'))
 		} else if (['candyland'].includes(continentArray[i])) {
 			travelArray.push(new Vacation(continentArray[i], continentArray[i], 'jpg'))

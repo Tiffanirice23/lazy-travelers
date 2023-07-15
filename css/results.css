@@ -62,10 +62,15 @@ body {
   text-align: center;
   padding-top: 25px;
   margin-top: 10px;
-  background-image: linear-gradient(to left, #06aaaa, #05456c);
+  background-image: linear-gradient(to left, #8406aa, #129aee);
   background-clip: text;
   -webkit-background-clip: text; /* For Safari/Chrome */
   color: transparent;
+  margin-bottom: 15px;
+}
+
+#vacationName span {
+  text-transform: capitalize;
 }
 
 

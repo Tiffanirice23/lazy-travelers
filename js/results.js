@@ -16,6 +16,7 @@ let savedArray = localStorage.getItem('travelArray');
 if (savedArray) {
   travelArray = JSON.parse(savedArray);
 }
+console.log('test', travelArray);
 let currentHighest = 0;
 let highestVotesGetter = {};
 for (let i = 0; i < travelArray.length; i++) {
@@ -25,4 +26,5 @@ for (let i = 0; i < travelArray.length; i++) {
   }
 }
 console.log(highestVotesGetter.src);
+document.getElementById('resultName').innerHTML = highestVotesGetter.name;
 document.getElementById('resultsImg').src = highestVotesGetter.src;
