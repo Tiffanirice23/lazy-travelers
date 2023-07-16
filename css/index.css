@@ -52,9 +52,9 @@ footer {
 } 
 
 #imgContainer img:hover{
-  -webkit-box-shadow: 0px 0px 50px 0px rgba(244, 183, 77, 0.9);
-  -moz-box-shadow: 0px 0px 50px 0px rgba(244, 183, 77, 0.9);
-  box-shadow: 0px 0px 50px 0px rgba(244, 183, 77, 0.9);
+  -webkit-box-shadow: 0px 0px 50px 0px rgb(255, 255, 255);
+  -moz-box-shadow: 0px 0px 50px 0px rgba(255, 255, 255);
+  box-shadow: 3px 3px 50px 3px rgba(255, 255, 255);
   cursor: pointer;
 }
 
@@ -78,7 +78,7 @@ h1 {
   text-align: center;
   padding-top: 25px;
   margin-top: 10px;
-  background-image: linear-gradient(to left, #010201, #0f5e23, #9142ce);
+  background-image: linear-gradient(to left, #40798c, #1f363d);
   background-clip: text;
   -webkit-background-clip: text; /* For Safari/Chrome */
   color: transparent;
@@ -86,7 +86,7 @@ h1 {
 
 
 #btnContainer {
-  margin-top: 50px;
+  margin-top: 30px;
   width: 100%;
 }
 
@@ -107,8 +107,8 @@ h1 {
 }
 
 #indexMain {
-  background-color: rgb(207, 233, 253);
-  border: 3px solid whitesmoke;
+  background-color: #7ca5b8;
+  border: 3px solid #2a6f97;
   padding: 25px;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
@@ -122,7 +122,7 @@ h1 {
   float: right;
   width: 300px;
   height: 30px;
-  color: red;
+  color: #231942;
 }
 
 
@@ -133,13 +133,13 @@ h2 {
 
 
 #introduction {
-  height: 30%;
-  border: 3px dotted rgb(252, 251, 249);
+  height: 10%;
+  border: 3px double rgb(252, 251, 249);
   padding: 10px;
 }
 
 p {
-  font-size: large;
+  font-size: medium;
   /* position: absolute;  */
   right: 5px; 
 }
