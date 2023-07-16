@@ -19,7 +19,7 @@
 }
 
 .usPictures {
-  border: 2px solid rgb(0, 0, 0); 
+  border: 2px inset #5e548e; 
 }
 
 #jaredProfile {
@@ -31,14 +31,12 @@
   font-size: 25px;
   margin-top: 30px;
   margin-bottom: 30px;
-  color: rgb(158, 34, 158);
+  color: #5e548e;
 }
 
 #aboutUsMain {
   display: block;
-  background-color: rgb(207, 233, 253);
-  border: 4px solid rgb(86, 18, 103);
-
+  background-color: #7ca5b8;
 }
 
 body{
@@ -61,7 +59,8 @@ body{
   margin: auto;
   /* margin-left: 20px; */
   font-size: 40px;
-  color: rgb(248, 248, 250);
+  color: #5e548e;
+  text-decoration: underline;
   position: relative;
 }
 
