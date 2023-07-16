@@ -7,7 +7,7 @@
   margin: 0 auto;
   margin-top: 70px;
   background-color: #7ca5b8;
-  border: 3px double #5e548e;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   height: 460px;
   width: 30%;
 }
@@ -51,10 +51,12 @@ body {
 }
 
 #indexRedirect, #aboutRedirect {
-  background-color: #5e548e;
+  background-color: #2c77a3d5;
   color:black;
   margin: 20px;
   text-decoration: none;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  padding: 3px;
 }
 
 #vacationName {
@@ -77,11 +79,11 @@ body {
 #resultsImg {
   width: 800px;
   height: 600px;
-  border: 3px inset #5e548e;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   text-align: center;
 }
 
 #resultName {
  
-  color:#5e548e;
+  color:#013a63;
 }

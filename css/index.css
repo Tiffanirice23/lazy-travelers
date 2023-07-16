@@ -61,6 +61,7 @@ footer {
 #userName {
   text-align: center;
   margin-bottom: 30px;
+  
 }
 
 header {
@@ -78,10 +79,11 @@ h1 {
   text-align: center;
   padding-top: 25px;
   margin-top: 10px;
-  background-image: linear-gradient(to left, #40798c, #1f363d);
+  background-image: linear-gradient(to left, #254752, #684d89);
   background-clip: text;
   -webkit-background-clip: text; /* For Safari/Chrome */
   color: transparent;
+  
 }
 
 
@@ -95,7 +97,9 @@ h1 {
   margin-left: 100px;
   width: 200px;
   height: 30px;
-  color: red;
+  color: #9f86c0;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+
 }
 
 #resetBtn {
@@ -103,7 +107,8 @@ h1 {
   margin-bottom: 20px;
   width: 200px;
   height: 30px;
-  color: red;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  color: #9f86c0;
 }
 
 #indexMain {
@@ -112,7 +117,7 @@ h1 {
   padding: 25px;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
 
 
@@ -134,7 +139,6 @@ h2 {
 
 #introduction {
   height: 10%;
-  border: 3px double rgb(252, 251, 249);
   padding: 10px;
 }
 
